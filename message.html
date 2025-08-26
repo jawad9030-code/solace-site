@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Motivation</title>
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <img src="1000042340.jpg" alt="Logo" class="logo-center" />
+    <div class="card">
+      <p class="message" id="motivationText">Loading...</p>
+      <p class="note">If our words brought you a smile or warm moment,<br>
+        you can <strong>tag or mention</strong> us on Instagram — <em>only if you feel like it 🌸</em>
+      </p>
+      <a class="insta-button" href="https://www.instagram.com/solace.bb/" target="_blank">Follow us on Instagram</a>
+    </div>
+  </div>
+  <script>
+    const quotes = [
+      "You're doing better than you think.",
+      "Every day is a fresh start.",
+      "You have a beautiful soul.",
+      "Kindness looks great on you.",
+      "You are stronger than your doubts.",
+      "You make a difference in this world.",
+      "You deserve peace and love.",
+      "You're not alone — ever.",
+      "Your presence matters.",
+      "Take a deep breath. You’ve got this."
+    ];
+    const name = localStorage.getItem('username') || '';
+    const msg = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('motivationText').innerText = msg;
+  </script>
+</body>
+</html>

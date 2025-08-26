@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solace</title>
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <img src="1000042340.jpg" alt="Solace Logo" class="logo-top">
+    <h1 class="title">Welcome to Solace</h1>
+    <p class="subtitle">Enter your name to receive a message</p>
+    <input type="text" id="nameInput" placeholder="Your name..." />
+    <button onclick="goToMessage()">Start</button>
+  </div>
+  <script>
+    function goToMessage() {
+      const name = document.getElementById('nameInput').value.trim();
+      if (name) {
+        localStorage.setItem('username', name);
+        window.location.href = 'message.html';
+      } else {
+        alert('Please enter your name first.');
+      }
+    }
+  </script>
+</body>
+</html>
